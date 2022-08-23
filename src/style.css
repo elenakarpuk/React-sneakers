@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+html, body {
+    background-color: #e7f6ff;
+    height: 100%;
+    width: 100%;
+  
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.wrapper {
+    background-color: #ffffff;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 20px;
+    max-width: 1080px;
+    margin: 50px auto;
+}
+
+.header__left {
+    display: flex;
+    align-items: center;
+}
+
+.header__left img {
+    margin-right: 15px;
+}
+.header__left h3 {
+    text-transform: uppercase;
+}
+.header__right {
+    display: flex;
+    cursor: pointer;
+}
+.header__right li {
+    margin-right: 30px;
+}
+.header__right img {
+    margin-right: 10px;
+}
+
+.content {
+    padding: 40px;
+}
+.content__title {
+}
+.sneakers {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content__block {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    justify-content: space-between;
+}
+.search__block {
+    border: 1px solid #f2f2f2;
+    display: flex;
+    padding: 0 15px;
+    border-radius: 10px;
+    position: relative;
+}
+.clear{
+    position: absolute;
+    right: 15px;
+    width: 18px;
+    height: 18px;
+    top: 13px;
+    cursor: pointer;
+}
+.search__block input{
+    border: 0;
+    padding: 13px;
+    font-size: 16px;
+    width: 200px;
+}
+/*-----------------------------------------*/
+.overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+
+}
+.drawer{
+    position: absolute;
+    width: 420px;
+    right: 0;
+    height: 100%;
+    background: #fff;
+    box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+ 
+}
+.drawer h2{
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.drawer h2 img{
+    cursor: pointer;
+}
+.drawer .items{
+    overflow: auto;
+}
+
+.cart__item{
+display: flex;
+align-items: center;
+border: 1px solid #f3f3f3;
+border-radius: 20px;
+overflow: hidden;
+margin-bottom: 20px;
+padding: 10px;
+}
+.cart__image img{
+   margin-right: 20px;
+}
+.cart__name p{
+margin-bottom: 5px;
+font-size: 16px;
+}
+.cart__name b{
+    font-size: 14px;
+}
+.cart__name{
+    margin-right: 20px;
+}
+.cart__remove{
+    opacity: 0.6;
+    transition: opacity 0.15s ease-in-out;
+    cursor: pointer;
+}
+.cart__remove:hover{
+    opacity: 1;
+}
+
+.result{
+    margin-bottom: 40px;
+}
+.result li{
+    display: flex;
+    margin-bottom: 20px;
+}
+.result div{
+    flex: 1;
+    border-bottom: 1px dashed #dfdfdf;
+    position: relative;
+    top: -4px;
+    margin: 0 10px;
+}
+.items{
+    flex: 1;
+}
+
+
+.green__button{
+    width: 100%;
+    border-radius: 18px;
+    background-color: #9dd558;
+    border: 0;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+    }
+.green__button:hover{
+    background-color: #aee070;
+}
+.green__button:active{
+    background-color: #87ad59;
+}
+
+.result__block .green__button{
+    position: relative;
+}
+.result__block .green__button:hover img{
+transform: translateX(7px)
+}
+
+.result__block .green__button img{
+    position: absolute;
+    right: 40px;
+    top: 13px;
+    transition: transform 0.15s ease-in-out;
+}
+
+/*Info----------------------------------------------------------*/
+
+.empty{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.empty__cart img{
+    margin-bottom: 20px;
+}
+.empty__description{
+    margin: 0 50px;
+    opacity: 0.4;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+
+.empty .green__button img{
+margin-right: 20px;
+  transition: transform 0.15s ease-in-out;
+  rotate: -180deg;
+    
+}
+.green__button:hover img{
+    transform: translateX(7px)
+    }
+
