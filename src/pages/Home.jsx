@@ -26,6 +26,7 @@ function Home({ items, searchValue, setSearchValue, onAddToFavorite, onChangeSea
                         <Card
                             key={index}
                             id={item.id}
+                            parentId={item.id}
                             title={item.title}
                             price={item.price}
                             imageUrl={item.imageUrl}

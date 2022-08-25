@@ -1,5 +1,6 @@
 *{
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
 }
@@ -13,10 +14,8 @@ a{
 html, body {
     background-color: #e7f6ff;
     height: 100%;
-    width: 100%;
   
 }
-
 header {
     display: flex;
     justify-content: space-between;
@@ -24,20 +23,18 @@ header {
     padding: 40px;
     border-bottom: 1px solid #eaeaea;
 }
-
 .wrapper {
+    min-height: 100%;
     background-color: #ffffff;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04);
     border-radius: 20px;
     max-width: 1080px;
     margin: 50px auto;
 }
-
 .header__left {
     display: flex;
     align-items: center;
 }
-
 .header__left img {
     margin-right: 15px;
 }
@@ -54,17 +51,13 @@ header {
 .header__right img {
     margin-right: 10px;
 }
-
 .content {
     padding: 40px;
-}
-.content__title {
 }
 .sneakers {
     display: flex;
     flex-wrap: wrap;
 }
-
 .content__block {
     display: flex;
     align-items: center;
@@ -94,14 +87,13 @@ header {
 }
 /*-----------------------------------------*/
 .overlay{
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
     width: 100%;
-    height: 100%;
-
+    min-height: 100%;
 }
 .drawer{
     position: absolute;
@@ -113,7 +105,6 @@ header {
     padding: 30px;
     display: flex;
     flex-direction: column;
- 
 }
 .drawer h2{
     margin-bottom: 30px;
@@ -123,10 +114,16 @@ header {
 .drawer h2 img{
     cursor: pointer;
 }
-.drawer .items{
-    overflow: auto;
+.drawer__items{
+    display: flex;
+    flex-direction: column; 
+    height: 90%;  
 }
-
+.drawer__items .items {
+    overflow: auto;
+    flex: 1 1 auto; 
+    margin-bottom: 30px;  
+}
 .cart__item{
 display: flex;
 align-items: center;
@@ -157,7 +154,6 @@ font-size: 16px;
 .cart__remove:hover{
     opacity: 1;
 }
-
 .result{
     margin-bottom: 40px;
 }
@@ -175,8 +171,6 @@ font-size: 16px;
 .items{
     flex: 1;
 }
-
-
 .green__button{
     width: 100%;
     border-radius: 18px;
@@ -194,14 +188,12 @@ font-size: 16px;
 .green__button:active{
     background-color: #87ad59;
 }
-
 .result__block .green__button{
     position: relative;
 }
 .result__block .green__button:hover img{
 transform: translateX(7px)
 }
-
 .result__block .green__button img{
     position: absolute;
     right: 40px;
@@ -228,15 +220,13 @@ transform: translateX(7px)
     margin-bottom: 40px;
     text-align: center;
 }
-
-
 .empty .green__button img{
 margin-right: 20px;
-  transition: transform 0.15s ease-in-out;
-  rotate: -180deg;
+transition: transform 0.15s ease-in-out;
+rotate: -180deg;
     
 }
 .green__button:hover img{
-    transform: translateX(7px)
-    }
+transform: translateX(7px)
+}
 

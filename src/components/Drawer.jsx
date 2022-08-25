@@ -34,10 +34,9 @@ function Drawer({ onClose, onRemove }) {
         <div className="overlay">
             <div className="drawer">
                 <h2>Корзина < img onClick={onClose} src="/images/remove.svg" alt="remove" /> </h2>
-
                 {
                     cartItems.length > 0 ? (
-                        <div>
+                        <div className="drawer__items">
                             <div className="items">
                                 {cartItems.map((obj) => (
                                     <div key={obj.id} className="cart__item">
@@ -75,16 +74,7 @@ function Drawer({ onClose, onRemove }) {
                                 image={isOrderComplete ? "/images/order-complete.svg" : "/images/cart-empty.svg"} />
 
                         )}
-
-
-
-
-
-
-
-
             </div>
-
         </div>
 
     )

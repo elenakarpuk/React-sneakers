@@ -1,11 +1,11 @@
 import axios from "axios";
 import React from "react";
 import { useState } from "react";
-import { AppContext } from "../App";
+//import { AppContext } from "../App";
 import Card from "../components/Card";
 
 function Orders() {
-    const { onAddToCart, onAddToFavorite } = React.useContext(AppContext)
+    //const { onAddToCart, onAddToFavorite } = React.useContext(AppContext)
     const [orders, setOrders] = useState([])
 
     React.useEffect(() => {
@@ -38,9 +38,6 @@ function Orders() {
                             title={item.title}
                             price={item.price}
                             imageUrl={item.imageUrl}
-                            onFavorite={(obj) => onAddToFavorite(obj)}
-                            onPlus={(obj) => onAddToCart(obj)}
-
                         />
                     ))}
                 </div>

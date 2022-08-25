@@ -13,15 +13,11 @@ function Card({
 }) {
 
     const { isItemAddedToCart } = React.useContext(AppContext);
-    //const [isAdded, setIsAdded] = React.useState(added)
     const [isFavorite, setIsFavorite] = React.useState(favoriteLike)
 
-    //console.log(id, isItemAddedToCart(id));
-
-
     const onClickPlus = () => {
-        onPlus({ id, title, price, imageUrl });
-        //setIsAdded(!isAdded);
+        onPlus({ id, parentId: id, title, price, imageUrl });
+
     }
 
     const onClickFavorite = () => {
@@ -31,10 +27,13 @@ function Card({
 
     return (
         < div className={styles.card} >
-            <div className={styles.favorite} onClick={onClickFavorite} >
-                <img
-                    src={isFavorite ? "/images/like.svg" : "/images/unlike.svg"}
-                    alt="like" /> </div>
+            {onFavorite &&
+                <div className={styles.favorite} onClick={onClickFavorite} >
+                    <img
+                        src={isFavorite ? "/images/like.svg" : "/images/unlike.svg"}
+                        alt="like" />
+                </div>}
+
 
             <img width={133} height={113} src={imageUrl} alt="sneakers" />
             <h5>{title}</h5>
@@ -43,10 +42,12 @@ function Card({
                     <span>Цена:</span>
                     <b>{price} руб.</b>
                 </div>
-                <img className={styles.plus}
-                    onClick={onClickPlus}
-                    src={isItemAddedToCart(id) ? "/images/button-checked.svg" : "/images/button-plus.svg"}
-                    alt="plus" />
+                {onPlus && (
+                    <img className={styles.plus}
+                        onClick={onClickPlus}
+                        src={isItemAddedToCart(id) ? "/images/button-checked.svg" : "/images/button-plus.svg"}
+                        alt="plus" />)}
+
 
             </div>
         </div >
