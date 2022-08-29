@@ -17,11 +17,9 @@ function Orders() {
                 //setOrders(data.map((obj) => obj.items).flat())
             };
             getOrders();
-        } catch {
+        } catch (error) {
             alert('Ошибка при запросе заказов')
         }
-
-
     }, []);
 
     return (
@@ -29,7 +27,7 @@ function Orders() {
             <div className="content__block">
                 <h1 className="content__title">Мои заказы</h1>
             </div>
-            <div className="sneakers">
+            <div>
                 <div className="sneakers">
                     {orders.map((item, index) => (
                         <Card

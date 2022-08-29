@@ -14,7 +14,7 @@ function Header(props) {
                     <img width={40} height={40} src="/images/header-logo.svg" alt="logo" />
                     <div className="header__info">
                         <h3>React Sneakers</h3>
-                        <p>Магазин стильных крассовок</p>
+                        <p>Магазин кроссовок</p>
                     </div>
                 </div>
             </Link>
@@ -22,7 +22,7 @@ function Header(props) {
             <ul className="header__right">
                 <li onClick={props.onClickCart}>
                     <img width={18} height={18} src="/images/header-basket.svg" alt="cart" />
-                    <span>{totalPrice} руб.</span>
+                    <span className="header__price">{totalPrice} руб.</span>
                 </li>
                 <li>
                     <Link to="/favorites">

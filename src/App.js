@@ -1,4 +1,5 @@
-import "./style.css"
+import "./style.css";
+import "./media.css";
 import React from "react";
 import axios from "axios";
 import { Route, Routes } from "react-router-dom"

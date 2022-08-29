@@ -35,7 +35,7 @@ function Card({
                 </div>}
 
 
-            <img width={133} height={113} src={imageUrl} alt="sneakers" />
+            <img className={styles.card__img} src={imageUrl} alt="sneakers" />
             <h5>{title}</h5>
             <div className={styles.info}>
                 <div className={styles.item}>
